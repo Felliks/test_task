@@ -1,0 +1,29 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Welcome in test work</h1>
+
+    <h3>Copy this javascript:</h3>
+    <figure class="highlight">
+        <pre style="color:#000000;background:#ffffff;"><span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">script</span><span style="color:#274796; "> </span><span style="color:#074726; ">type</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">"text/javascript"</span><span style="color:#a65700; ">&gt;</span>
+            <span style="color:#800000; font-weight:bold; ">var</span> iframe <span style="color:#808030; ">=</span> document<span style="color:#808030; ">.</span>createElement<span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">iframe</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span>
+            iframe<span style="color:#808030; ">.</span>setAttribute<span style="color:#808030; ">(</span><span style="color:#800000; ">"</span><span style="color:#0000e6; ">src</span><span style="color:#800000; ">"</span><span style="color:#808030; ">,</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">{{ iframe_url }}</span><span style="color:#800000; ">"</span><span style="color:#808030; ">)</span><span style="color:#800080; ">;</span>
+            iframe<span style="color:#808030; ">.</span>style<span style="color:#808030; ">.</span>width <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">640px</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+            iframe<span style="color:#808030; ">.</span>style<span style="color:#808030; ">.</span>height <span style="color:#808030; ">=</span> <span style="color:#800000; ">"</span><span style="color:#0000e6; ">480px</span><span style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+            document<span style="color:#808030; ">.</span>body<span style="color:#808030; ">.</span>appendChild<span style="color:#808030; ">(</span>iframe<span style="color:#808030; ">)</span><span style="color:#800080; ">;</span>
+        <span style="color:#a65700; ">&lt;/</span><span style="color:#800000; font-weight:bold; ">script</span><span style="color:#a65700; ">&gt;</span>
+        </pre>
+    </figure>
+
+    <h3>Example:</h3>
+    <div id="orders_iframe">
+    </div>
+
+    <script type="text/javascript">
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "{{ iframe_url }}");
+        iframe.style.width = "640px";
+        iframe.style.height = "480px";
+        $('#orders_iframe').append(iframe);
+    </script>
+{% endblock %}

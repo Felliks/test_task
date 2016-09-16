@@ -1,0 +1,11 @@
+services:
+  app.orders.controller:
+    class: AppBundle\Controller\OrdersController
+    lazy: true
+    arguments:
+      - '@templating.engine.twig'
+      - '@form.factory'
+      - '@router.default'
+    calls:
+      - [setOrdersManager, ['@orders.manager']]
+    scope: request

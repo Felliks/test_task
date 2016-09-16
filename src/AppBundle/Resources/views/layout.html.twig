@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>{% block title %}Test work{% endblock title %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <script src="//code.jquery.com/jquery.js"></script>
+
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <link href="{{ asset('datetimepicker/jquery.datetimepicker.css') }}" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="{{ asset('datetimepicker/jquery.datetimepicker.full.js') }}"></script>
+
+    <link href="{{ asset('jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('jquery-ui/jquery-ui.structure.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('jquery-ui/jquery-ui.theme.min.css') }}" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="{{ asset('jquery-ui/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/underscore-min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+</head>
+
+<body>
+
+<div class="container" style="padding-top: 5%">
+    {% block body %}{% endblock body %}
+</div>
+
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+services:
+    order_date_time_validator:
+        class: AppBundle\Validator\OrderDateTimeValidator
+        arguments:
+          - "%orders.allowed.days%"
+          - "%orders.allowed.times%"
+        tags:
+          - name: validator.constraint_validator
+            alias: order_date_time

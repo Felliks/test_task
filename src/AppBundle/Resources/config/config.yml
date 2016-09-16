@@ -1,0 +1,5 @@
+imports:
+  - { resource: parameters.yml }
+  - { resource: controllers.yml }
+  - { resource: managers.yml }
+  - { resource: validators.yml }

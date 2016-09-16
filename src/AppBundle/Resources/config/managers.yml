@@ -1,0 +1,9 @@
+services:
+  orders.manager:
+    class:  AppBundle\Manager\OrdersManager
+    lazy: true
+    arguments:
+      - '@doctrine.orm.entity_manager'
+    calls:
+      - [setAllowedWeekDays, ['%orders.allowed.days%']]
+      - [setAllowedTimes, ['%orders.allowed.times%']]
